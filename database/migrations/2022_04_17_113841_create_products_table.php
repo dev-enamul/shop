@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('cate_id');
             $table->string('name');
+            $table->string('slug');
             $table->mediumText('small_description');
             $table->longText('description');
             $table->string('original_price');
@@ -24,8 +25,8 @@ return new class extends Migration
             $table->string('image');
             $table->string('qty');
             $table->string('tax');
-            $table->tinyInteger('status');
-            $table->tinyInteger('trending');
+            $table->tinyInteger('status')->default(0);
+            $table->tinyInteger('trending')->default(0);
             $table->mediumText('meta_title');
             $table->mediumText('meta_keyword');
             $table->mediumText('meta_description');
